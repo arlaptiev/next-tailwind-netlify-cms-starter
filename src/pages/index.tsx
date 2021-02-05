@@ -13,14 +13,16 @@ const Index = () => (
       />
     )}
   >
-    <a className="w-full" href="https://github.com/ixartz/Next-js-Boilerplate">
-      <Image
-        src={`${process.env.baseUrl}/assets/img/nextjs-starter-banner.png`}
-        alt="Nextjs starter banner"
-        layout="fill"
-        objectFit="cover"
-      />
-    </a>
+    <div className="relative w-full" style={{ paddingTop: '50%' }}>
+      <a href="https://github.com/ixartz/Next-js-Boilerplate">
+        <Image
+          src={`${process.env.baseUrl}/assets/img/nextjs-starter-banner.png`}
+          alt="Nextjs starter banner"
+          layout="fill"
+          objectFit="cover"
+        />
+      </a>
+    </div>
     <h1 className="font-bold text-2xl">
       Boilerplate code for your Nextjs project with Tailwind CSS
     </h1>
