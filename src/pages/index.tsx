@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Image from 'next/image';
+
 import { Main } from '../templates/Main';
 import { SEO } from '../utils/SEO';
 
@@ -11,10 +13,12 @@ const Index = () => (
       />
     )}
   >
-    <a href="https://github.com/ixartz/Next-js-Boilerplate">
-      <img
+    <a className="w-full" href="https://github.com/ixartz/Next-js-Boilerplate">
+      <Image
         src={`${process.env.baseUrl}/assets/img/nextjs-starter-banner.png`}
         alt="Nextjs starter banner"
+        layout="fill"
+        objectFit="cover"
       />
     </a>
     <h1 className="font-bold text-2xl">
