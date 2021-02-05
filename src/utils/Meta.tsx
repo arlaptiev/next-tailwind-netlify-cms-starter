@@ -1,10 +1,22 @@
 import React from 'react';
 
+import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 
 import { Config } from './Config';
 
-const MyHead = () => (
+type MetaProps = {
+  title?: string;
+  description?: string;
+  canonical?: string;
+} & typeof defaultProps;
+
+const defaultProps = {
+  title: Config.title,
+  description: Config.description,
+};
+
+const Meta = (props: MetaProps) => (
   <>
     <Head>
       <meta charSet="UTF-8" />
@@ -56,7 +68,22 @@ const MyHead = () => (
       */}
       <meta name="theme-color" content={Config.theme_primary_color} />
     </Head>
+
+    <NextSeo
+      title={props.title}
+      description={props.description}
+      canonical={props.canonical}
+      openGraph={{
+        title: props.title,
+        description: props.description,
+        url: props.canonical,
+        locale: Config.locale,
+        site_name: Config.site_name,
+      }}
+    />
   </>
 );
 
-export default MyHead;
+Meta.defaultProps = defaultProps;
+
+export { Meta };

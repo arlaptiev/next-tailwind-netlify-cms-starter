@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Main } from '../templates/Main';
 import { Image } from '../utils/Image';
-import { SEO } from '../utils/SEO';
+import { Meta } from '../utils/Meta';
 
 const Index = () => (
   <Main
-    seo={
-      <SEO description="Next js Boilerplate is the perfect starer code for your project. Build your React application with Next.js framework." />
+    meta={
+      <Meta description="Next js Boilerplate is the perfect starer code for your project. Build your React application with Next.js framework." />
     }
   >
     <div className="relative w-full" style={{ paddingTop: '50%' }}>
