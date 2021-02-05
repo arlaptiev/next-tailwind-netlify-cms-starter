@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react';
 import Link from 'next/link';
 
 import { Config } from '../utils/Config';
-import { Head } from '../utils/Head';
+import Head from '../utils/Head';
 
 type IMainProps = {
   seo: ReactNode;
@@ -12,7 +12,6 @@ type IMainProps = {
 
 const Main = (props: IMainProps) => (
   <div className="antialiased w-full text-gray-700">
-
     <Head />
     {props.seo}
 

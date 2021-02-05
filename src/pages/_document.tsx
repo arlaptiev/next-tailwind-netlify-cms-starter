@@ -5,7 +5,8 @@ import Document, {
 } from 'next/document';
 
 import { Config } from '../utils/Config';
-import { GA_TRACKING_ID } from '../utils/gtag';
+
+export const GA_MEASUREMENT_ID = 'G-PC53XDZNRK';
 
 class MyDocument extends Document {
   render() {
@@ -13,7 +14,7 @@ class MyDocument extends Document {
       <Html lang={Config.locale}>
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
           <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
@@ -21,7 +22,7 @@ class MyDocument extends Document {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA_TRACKING_ID}', {
+              gtag('config', '${GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
               });
           `,

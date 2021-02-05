@@ -1,12 +1,12 @@
 import React from 'react';
 
-import HeadTag from 'next/head';
+import Head from 'next/head';
 
 import { Config } from './Config';
 
-const Head = () => (
+const MyHead = () => (
   <>
-    <HeadTag>
+    <Head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
 
@@ -55,8 +55,8 @@ const Head = () => (
       https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
       */}
       <meta name="theme-color" content={Config.theme_primary_color} />
-    </HeadTag>
+    </Head>
   </>
 );
 
-export { Head };
+export default MyHead;
