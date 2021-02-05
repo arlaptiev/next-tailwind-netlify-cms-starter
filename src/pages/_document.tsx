@@ -11,8 +11,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={Config.locale}>
-        <Head />
-        <GoogleAnalytics4 />
+        <Head>
+          <GoogleAnalytics4 />
+        </Head>
         <body>
           <Main />
           <NextScript />
